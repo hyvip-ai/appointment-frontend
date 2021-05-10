@@ -1,0 +1,44 @@
+.full{
+    /* display: flex;
+    height: 100vh; */
+    width: 100%;
+}
+
+
+
+.mydiv{
+    width: 100%;
+    /* height: 100vh; */
+ 
+ 
+}
+
+
+a{
+    display: block;
+    margin: 50px auto;
+    width: 60%;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+
+}
+.mydiv2{
+    /* height: 100vh; */
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 80px;
+    border: 5px solid white;
+
+}
+.mydiv2 h2{
+    text-align: center;
+    font-family: cursive;
+    color: tomato;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 35px;
+  
+
+}

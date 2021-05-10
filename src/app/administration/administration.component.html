@@ -1,0 +1,30 @@
+<h1>All Appointments</h1>
+<div class="mytable">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date(YYYY-MM-DD)</th>
+        <th>Other Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let item of allappointments;index as i'>
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.date}}</td>
+        <td><button (click)='printid(item._id)' class="btn btn-outline-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="btmdiv">
+  <button class="btn btn-outline-primary mybtn" (click)='godash()'>Go To Dashboard</button>
+  <button class="btn btn-outline-success mybtn2" (click)='gocancel()'>Go To Cancel Page</button>
+
+</div>
+

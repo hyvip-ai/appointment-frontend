@@ -1,0 +1,28 @@
+
+<!-- 
+<p *ngIf='username'>{{username}}</p>
+<p *ngIf='email'>{{email}}</p> -->
+<div class="full">
+<div class="mydiv">
+    <div class="card">
+        <div class="card-header" *ngIf='username'>
+          <h1>Welcome @{{username}},</h1>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title" *ngIf='email'>Registered email is {{email}}</h2>
+          <h3 class="card-text">This is a simple appointment app made using MEAN stack developed by me. Here you can book an appointment easily and there is a limit of 10 appointment perday and you can delete or update your appointment. Click the Book Apointment button to start</h3>
+          <a class="btn btn-success" (click)='gobook()'>Book Appointment</a>
+          <a class="btn btn-primary" (click)='logOut()'>Logout</a>
+
+        </div>
+      </div>
+  </div>
+  <div class="mydiv2">
+    <h2>Your Apointments</h2>
+    <app-mineappointments></app-mineappointments>
+   
+  </div>
+
+  
+</div>
+

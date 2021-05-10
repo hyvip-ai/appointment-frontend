@@ -1,0 +1,27 @@
+<!-- <p>register works!</p> -->
+<div class="registerForm">
+<div class="msg"><h3 *ngIf='messege'>{{messege}}</h3></div>
+<div class="myform">
+    <h2>Registration Form</h2>
+    <form class="form-floating" [formGroup] = "registrationForm">
+    <div class="form-floating">
+        <input formControlName= "name" type="text" class="form-control" id="floatingName" placeholder="name">
+        <label for="floatingName">Name</label>
+    </div>
+    <div class="form-floating">
+        <input formControlName= "username" type="text" class="form-control" id="floatingUsername" placeholder="UserName this name will be visible in your Dash Board">
+        <label for="floatingPassword">Username</label>
+    </div>
+<div class="form-floating">
+    <input formControlName= "email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating">
+    <input formControlName= "password" type="password" class="form-control" id="floatingPassword" placeholder="Password(min 4 char)">
+    <label for="floatingPassword">Password(min 4 char)</label>
+  </div>
+  <button class="btn btn-primary" (click) = 'goLogin()'>Go to Login Page</button>
+  <button class="btn btn-success" [disabled]="!registrationForm.valid" (click) = 'register()'>Register</button>
+</form>
+</div>
+</div>

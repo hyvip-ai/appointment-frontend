@@ -1,0 +1,20 @@
+<div class="mydiv">
+    <div class="msg" *ngIf='messege'><h2>{{messege}}</h2></div>
+<div class="bookingform">
+    <form class="form-floating" [formGroup]='bookingform'>
+        <h2>Book Appointment</h2>
+        <div class="form-floating">
+            <input type="date" formControlName='date' name="date" value="" placeholder="enter date" id="floatingdate">
+          </div>
+          <div class="form-floating">
+            <input formControlName='email' type="text" class="form-control" id="floatingEmail" placeholder="Email">
+            <label for="floatingEmail">Email</label>
+          </div>
+          <div class="form-floating">
+            <input formControlName='name' type="text" class="form-control" id="floatingtext" placeholder="Name">
+            <label for="floatingPassword">Name</label>
+          </div>
+          <button (click)='book()' [disabled]='!bookingform.valid' class="btn btn-primary">Book Appointment</button>
+          </form>
+</div>
+</div>

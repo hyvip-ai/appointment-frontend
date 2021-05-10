@@ -1,0 +1,24 @@
+<!-- <p>editform works!</p> -->
+
+<div class="mydiv">
+    <div class="msg" *ngIf='mymsg'><h2>{{mymsg.messege}}</h2></div>
+<div class="bookingform" *ngIf='mydata'>
+    <form class="form" [formGroup]='editform'>
+        <h2>Edit Appointment</h2>
+        <div class="mb-3">
+            <!-- <label for="exampleInputDate" class="form-label">Date</label> -->
+            <input type="date" class="form-control" formControlName='date' id="exampleDate" value="{{mydata.appointment[0].date}}">
+          </div>
+        <div class="mb-3">
+            <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+            <input type="email" class="form-control" placeholder="email" formControlName='email' id="exampleInputEmail1" aria-describedby="emailHelp " value="{{mydata.appointment[0].email}}">
+          </div>
+          <div class="mb-3">
+            <!-- <label for="exampleInputname" class="form-label">Name</label> -->
+            <input type="text" class="form-control" id="exampleName" placeholder="Name" formControlName='name'>
+          </div>
+          <button (click)='edit()' [disabled]='!editform.valid' class="btn btn-success">Edit Appointment</button>
+                <button (click)='cancel()' [disabled]='!editform.valid' class="btn btn-primary">Cancel</button>
+          </form>
+</div>
+</div>
